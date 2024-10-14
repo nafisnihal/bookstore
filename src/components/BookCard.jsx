@@ -1,6 +1,7 @@
 import { FaUserPen } from "react-icons/fa6";
 import { IoIosArrowForward } from "react-icons/io";
 import { LiaHeart, LiaHeartSolid } from "react-icons/lia";
+import { Link } from "react-router-dom";
 
 const BookCard = ({ book, toggleWishlist, isWishlisted }) => {
   // Function to reformat author's name from "Last, First Middle" to "First Middle Last"
@@ -46,9 +47,11 @@ const BookCard = ({ book, toggleWishlist, isWishlisted }) => {
               />
             )}
           </button>
-          <button className=" py-1 pl-3 pr-2 rounded border text-black text-sm flex items-center gap-1 hover:bg-gray-800 hover:text-white transition-colors duration-200 ease-in-out">
-            View Details <IoIosArrowForward className="mb-0.5" />
-          </button>
+          <Link to={`/book/${book?.id}`}>
+            <button className=" py-1 pl-3 pr-2 rounded border text-black text-sm flex items-center gap-1 hover:bg-gray-800 hover:text-white transition-colors duration-200 ease-in-out">
+              View Details <IoIosArrowForward className="mb-0.5" />
+            </button>
+          </Link>
         </div>
       </div>
     </div>
