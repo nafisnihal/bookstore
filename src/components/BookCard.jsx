@@ -16,7 +16,7 @@ const BookCard = ({ book, toggleWishlist, isWishlisted }) => {
     .join(", ");
 
   return (
-    <div className="border flex items-start gap-5 group overflow-hidden p-4 ">
+    <div className="border flex items-start  gap-5 group overflow-hidden p-4 ">
       <img
         src={book.formats["image/jpeg"]}
         alt={book.title}
